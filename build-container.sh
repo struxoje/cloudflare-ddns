@@ -9,3 +9,4 @@ docker buildx build \
   -t ghcr.io/struxoje/cloudflare-ddns:latest \
   --push \
   .
+  
