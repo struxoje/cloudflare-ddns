@@ -1,0 +1,36 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore local virtual environments
+.venv/
+env/
+.env
+venv/
+
+# Ignore macOS metadata
+.DS_Store
+
+# Ignore Git and editor files
+.git/
+.gitignore
+.vscode/
+
+# Optional: ignore test files
+tests/
+
+# Ignore lock files if not used inside Docker
+uv.lock
+
+# Node stuff (if frontend present)
+node_modules/
+
+# Ignore Docker ignore itself
+.dockerignore
+
+# Ignore UI files
+app-ui/
+run.sh
+create-container.sh
+.python-version
