@@ -12,10 +12,11 @@ WORKDIR /app
 RUN apk add --no-cache tzdata curl
 
 # Copy files and app logic
-COPY app/ run.sh cronjob requirements.txt ./
+COPY app/ run.sh requirements.txt ./
+COPY run.sh /etc/periodic/15min/run.sh
 
 # Make entry script executable and install dependencies
-RUN chmod +x run.sh && pip install --no-cache-dir -r requirements.txt
+RUN chmod +x /etc/periodic/15min/run.sh && pip install --no-cache-dir -r requirements.txt
 
 # Default command
-CMD ["sh", "./run.sh"]
+CMD ["crond", "-f"]
