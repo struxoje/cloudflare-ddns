@@ -31,6 +31,5 @@ node_modules/
 
 # Ignore UI files
 app-ui/
-run.sh
 create-container.sh
 .python-version
